@@ -34,19 +34,19 @@ export function createGallery(images) {
      <ul class="stats">
                 <li class="stats-item">
                     <p class="stats-title">Likes</p>
-                    <p class="stat-content">'${likes}'</p>
+                    <p class="stat-content">${likes}</p>
                 </li>
                 <li class="stats-item">
                     <p class="stats-title">Views</p>
-                    <p class="stat-content">'${views}'</p>
+                    <p class="stat-content">${views}</p>
                 </li>
                 <li class="stats-item">
                     <p class="stats-title">Comments</p>
-                    <p class="stat-content">'${comments}'</p>
+                    <p class="stat-content">${comments}</p>
                 </li>
-                <li class="stats-title">
-                    <p class="stats-text">Downloads</p>
-                    <p class="stat-content">'${downloads}'</p>
+                <li class="stats-item">
+                    <p class="stats-title">Downloads</p>
+                    <p class="stat-content">${downloads}</p>
                 </li>
             </ul>
 
