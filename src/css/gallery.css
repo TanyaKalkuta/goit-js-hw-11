@@ -1,0 +1,40 @@
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1440px;
+  height: auto;
+  padding: 24px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(33.333% - 48px);
+}
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+.stats {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 20px;
+}
+.stats-item {
+  text-align: center;
+}
+.stats-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.33;
+}
+.stat-content {
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 24px;
+}
