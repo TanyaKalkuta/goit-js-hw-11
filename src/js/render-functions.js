@@ -8,6 +8,7 @@ const loaderEl = document.querySelector('#loader');
 const lightbox = new SimpleLightbox('#gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
+  spinner: true,
 });
 
 export function createGallery(images) {
@@ -27,10 +28,12 @@ export function createGallery(images) {
       }) => `<li class="gallery-item">
   <a class="gallery-link" href='${largeImageURL}'>
     <img
+    loading="lazy"
       class="gallery-image"
       src="${webformatURL}"
       alt="${tags}"
     />
+      </a>
      <ul class="stats">
                 <li class="stats-item">
                     <p class="stats-title">Likes</p>
@@ -49,8 +52,6 @@ export function createGallery(images) {
                     <p class="stat-content">${downloads}</p>
                 </li>
             </ul>
-
-  </a>
 </li>`
     )
     .join('');

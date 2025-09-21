@@ -38,13 +38,17 @@ form.addEventListener('submit', e => {
   getImagesByQuery(query)
     .then(images => {
       // data — об'єкт відповіді Pixabey: { total, totalHits, hits: [...] }
-      hideLoader();
-      searchBtn.disabled = false;
 
       if (!images || images.length === 0) {
-        iziToast.info({
-          title: 'Результат',
-          message: `За запитом "${query}" нічого не знайдено.`,
+        iziToast.show({
+          message: `Sorry, there are no images matching your search query. Please try again!`,
+          backgroundColor: 'pink',
+          position: 'topRight',
+          close: false,
+          messageSize: '20',
+          timeout: 5000,
+          icon: '<svg class="icon icon-x-circle"><use xlink:href="#icon-x-circle"></use></svg>',
+          maxWidth: 900,
         });
         return;
       }
@@ -59,14 +63,21 @@ form.addEventListener('submit', e => {
       });
     })
     .catch(err => {
-      hideLoader();
-      searchBtn.disabled = false;
-
       // показуємо помилку
       console.error('Fetch error:', err);
       iziToast.error({
         title: 'Помилка',
         message: 'Проблема при завантаженні зображень. Спробуйте пізніше.',
+        backgroundColor: 'red',
+        position: 'topRight',
+        close: false,
+        messageSize: '30',
+        timeout: 5000,
       });
+    })
+    .finally(() => {
+      hideLoader();
+      searchBtn.disabled = false;
     });
+  form.reset();
 });

@@ -11,6 +11,7 @@ export const getImagesByQuery = query => {
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
+        safesearch: true,
         per_page: 12,
       },
     })
