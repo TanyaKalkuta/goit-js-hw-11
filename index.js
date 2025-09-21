@@ -8,19 +8,19 @@ import{a as h,S as y,i as n}from"./assets/vendor-CYMld6vM.js";(function(){const 
      <ul class="stats">
                 <li class="stats-item">
                     <p class="stats-title">Likes</p>
-                    <p class="stat-content">'${s}'</p>
+                    <p class="stat-content">${s}</p>
                 </li>
                 <li class="stats-item">
                     <p class="stats-title">Views</p>
-                    <p class="stat-content">'${o}'</p>
+                    <p class="stat-content">${o}</p>
                 </li>
                 <li class="stats-item">
                     <p class="stats-title">Comments</p>
-                    <p class="stat-content">'${p}'</p>
+                    <p class="stat-content">${p}</p>
                 </li>
-                <li class="stats-title">
-                    <p class="stats-text">Downloads</p>
-                    <p class="stat-content">'${m}'</p>
+                <li class="stats-item">
+                    <p class="stats-title">Downloads</p>
+                    <p class="stat-content">${m}</p>
                 </li>
             </ul>
 
